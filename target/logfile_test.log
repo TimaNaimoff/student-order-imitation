@@ -1,0 +1,38 @@
+2022-09-27 20:20:24 DEBUG StudentDaoImpl:72 - SO:StudentOrder{studentOrderStatus=null, studentOrderTime=null, studentId=10, husband=Adult{passportSeria='10010', passportNumber='1000010', issueDate=2017-09-15, university=University{universityId=2, universityName=''}, issueDepartment=PassportOffice{officeId=1, officeAreaId='', officeName=''}} Person{surName='Petrov', giveName='Anton', patronymic='Vasilyevich', dateOfBith=2001-02-21, adress=Adress{street=Street{streetCode=1, streetName='First street'}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='HH12345'}, wife=Adult{passportSeria='20010', passportNumber='2000010', issueDate=2018-01-05, university=University{universityId=1, universityName=''}, issueDepartment=PassportOffice{officeId=2, officeAreaId='', officeName=''}} Person{surName='Petrova', giveName='Antonina', patronymic='Vasilyevna', dateOfBith=1994-06-09, adress=Adress{street=Street{streetCode=1, streetName=''}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='WW12345'}, marriageSertificated=123456010, marriageDate=2014-04-02, marriageOffice=RegisterOffice{officeId=1, officeAreaId='', officeName=''}, children=[Child{certificateNumber='300010', issueDate=2018-06-11, issueDepartment=RegisterOffice{officeId=2, officeAreaId='', officeName=''}} Person{surName='Tupak', giveName='Tupakina', patronymic='Kukuruzov', dateOfBith=2007-01-02, adress=Adress{street=Street{streetCode=1, streetName='First street'}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='null'}, Child{certificateNumber='400010', issueDate=2018-07-19, issueDepartment=RegisterOffice{officeId=1, officeAreaId='', officeName=''}} Person{surName='Tupak', giveName='Tupakia', patronymic='Kukuruzovna', dateOfBith=2002-02-02, adress=Adress{street=Street{streetCode=1, streetName=''}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='null'}], studentOrderDate=null}
+2022-09-27 20:20:25 DEBUG StudentDaoImpl:72 - SO:StudentOrder{studentOrderStatus=null, studentOrderTime=null, studentId=10, husband=Adult{passportSeria='10010', passportNumber='1000010', issueDate=2017-09-15, university=University{universityId=2, universityName=''}, issueDepartment=PassportOffice{officeId=1, officeAreaId='', officeName=''}} Person{surName='Petrov', giveName='null', patronymic='Vasilyevich', dateOfBith=2001-02-21, adress=Adress{street=Street{streetCode=1, streetName='First street'}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='HH12345'}, wife=Adult{passportSeria='20010', passportNumber='2000010', issueDate=2018-01-05, university=University{universityId=1, universityName=''}, issueDepartment=PassportOffice{officeId=2, officeAreaId='', officeName=''}} Person{surName='Petrova', giveName='Antonina', patronymic='Vasilyevna', dateOfBith=1994-06-09, adress=Adress{street=Street{streetCode=1, streetName=''}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='WW12345'}, marriageSertificated=123456010, marriageDate=2014-04-02, marriageOffice=RegisterOffice{officeId=1, officeAreaId='', officeName=''}, children=[Child{certificateNumber='300010', issueDate=2018-06-11, issueDepartment=RegisterOffice{officeId=2, officeAreaId='', officeName=''}} Person{surName='Tupak', giveName='Tupakina', patronymic='Kukuruzov', dateOfBith=2007-01-02, adress=Adress{street=Street{streetCode=1, streetName='First street'}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='null'}, Child{certificateNumber='400010', issueDate=2018-07-19, issueDepartment=RegisterOffice{officeId=1, officeAreaId='', officeName=''}} Person{surName='Tupak', giveName='Tupakia', patronymic='Kukuruzovna', dateOfBith=2002-02-02, adress=Adress{street=Street{streetCode=1, streetName=''}, building='Zakamsk', extension='', apartment='', postCode=''}, studentId='null'}], studentOrderDate=null}
+2022-09-27 20:20:26 ERROR StudentDaoImpl:106 - ОШИБКА: значение NULL в столбце "h_given_name" отношения "jc_student_order" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (0, 2, 2022-09-27 20:20:25.921437, Petrov, null, Vasilyevich, 2001-02-21, 10010, 1000010, 2017-09-15, 1,           , 1, Zakamsk, , , 2, HH12345, Petrova, Antonina, Vasilyevna, 1994-06-09, 20010, 2000010, 2018-01-05, 2,           , 1, Zakamsk, , , 1, WW12345, 123456010, 1, 2014-04-02).
+org.postgresql.util.PSQLException: ОШИБКА: значение NULL в столбце "h_given_name" отношения "jc_student_order" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (0, 2, 2022-09-27 20:20:25.921437, Petrov, null, Vasilyevich, 2001-02-21, 10010, 1000010, 2017-09-15, 1,           , 1, Zakamsk, , , 2, HH12345, Petrova, Antonina, Vasilyevna, 1994-06-09, 20010, 2000010, 2018-01-05, 2,           , 1, Zakamsk, , , 1, WW12345, 123456010, 1, 2014-04-02).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at edu.javacourse.studentorder.dao.StudentDaoImpl.saveStudentOrder(StudentDaoImpl.java:91)
+	at edu.javacourse.studentorder.dao.StudentDaoImplTest.saveStudentOrderError(StudentDaoImplTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
