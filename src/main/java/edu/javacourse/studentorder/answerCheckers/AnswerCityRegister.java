@@ -2,8 +2,6 @@ package edu.javacourse.studentorder.answerCheckers;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.javacourse.studentorder.reg_checkers.AnswerSityRegisterItem;
-
 public class AnswerCityRegister {
     private boolean success;
     private List<AnswerSityRegisterItem>item;

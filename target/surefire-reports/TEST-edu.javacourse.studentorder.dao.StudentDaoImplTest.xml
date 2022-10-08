@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="edu.javacourse.studentorder.dao.SaveStudentOrderTest" time="0" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="edu.javacourse.studentorder.dao.StudentDaoImplTest" time="0.563" errors="0" skipped="0">
   <properties>
+    <property name="idea.version" value="2021.3.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="19+36-2238"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
@@ -24,28 +25,28 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
-    <property name="stderr.encoding" value="cp866"/>
+    <property name="stderr.encoding" value="Cp1251"/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6\bin\m2.conf"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="stdout.encoding" value="cp866"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6\bin;C:\Program Files\Java\jdk-19;;."/>
-    <property name="maven.conf" value="C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6/conf"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6\bin;C:\Program Files\Java\jdk-19;;."/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="63.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\malik"/>
     <property name="user.timezone" value="Asia/Tashkent"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="file.encoding" value="windows-1251"/>
     <property name="java.specification.version" value="19"/>
     <property name="user.name" value="malik"/>
-    <property name="java.class.path" value="C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 package"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -53,7 +54,7 @@
     <property name="java.version" value="19"/>
     <property name="native.encoding" value="Cp1251"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\malik\OneDrive\Рабочий стол\Backend Complects\apache-maven-3.8.6"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3"/>
     <property name="file.separator" value="\"/>
     <property name="java.version.date" value="2022-09-20"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -61,9 +62,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.javacourse.studentorder.dao.SaveStudentOrderTest" name="saveStudentOrder" time="0"/>
-  <testcase classname="edu.javacourse.studentorder.dao.SaveStudentOrderTest" name="main" time="0"/>
-  <testcase classname="edu.javacourse.studentorder.dao.SaveStudentOrderTest" name="shedulerStudentOrder" time="0"/>
-  <testcase classname="edu.javacourse.studentorder.dao.SaveStudentOrderTest" name="buildStudent" time="0"/>
-  <testcase classname="edu.javacourse.studentorder.dao.SaveStudentOrderTest" name="plannerLol" time="0"/>
+  <testcase classname="edu.javacourse.studentorder.dao.StudentDaoImplTest" name="saveStudentOrder" time="0.328"/>
+  <testcase classname="edu.javacourse.studentorder.dao.StudentDaoImplTest" name="saveStudentOrderError" time="0.11"/>
+  <testcase classname="edu.javacourse.studentorder.dao.StudentDaoImplTest" name="getStudentOrders" time="0.125"/>
 </testsuite>

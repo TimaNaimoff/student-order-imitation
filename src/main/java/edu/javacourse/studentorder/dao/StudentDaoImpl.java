@@ -59,7 +59,7 @@ public class StudentDaoImpl implements StudentOrderDao {
                     "INNER JOIN jc_passport_office po_w ON po_w.p_office_id=so.w_passport_ofice_id " +
                     "INNER JOIN jc_student_children soc ON soc.student_order_id = so.student_order_id "+
                     "INNER JOIN jc_register_office ro_c ON ro_c.r_office_id=soc.c_register_office_id "+
-                    "WHERE student_order_status = ? ORDER BY so.student_order_id LIMIT ? ";
+                    "WHERE student_order_status = ? ORDER BY so.student_order_id LIMIT ?";
 
     private Connection getConnection() throws SQLException {
         //Config.getProperty(Config.DB_LIMIT)
@@ -161,7 +161,7 @@ public class StudentDaoImpl implements StudentOrderDao {
 
     private void setParamsForAddres(Person person, PreparedStatement stat, int start) throws SQLException {
         Adress h_adress= person.getAdress();
-        stat.setString(start,h_adress.getPostCode());
+        stat.setString(start,h_adress.getStreet_code());
         stat.setLong(start+1,h_adress.getStreet().getStreetCode());
         stat.setString(start +2,h_adress.getBuilding());
         stat.setString(start +3,h_adress.getExtension());
@@ -189,6 +189,7 @@ public class StudentDaoImpl implements StudentOrderDao {
              rs.close();
         } catch(SQLException e){
             logger.error(e.getMessage(),e);
+            e.printStackTrace();
             throw new DaoException();
         }
         return result;
@@ -270,7 +271,7 @@ public class StudentDaoImpl implements StudentOrderDao {
         adult.setIssueDepartment(office);
 
         Adress adress=new Adress();
-        adress.setPostCode(rs.getString(prefix+"post_index"));
+        adress.setStreet_code(rs.getString(prefix+"post_index"));
         adress.setStreet(new Street((rs.getLong(prefix+"street_code")),""));
         adress.setBuilding(rs.getString(prefix+"bulding"));
         adress.setExtension(rs.getString(prefix+"extension"));
@@ -314,7 +315,7 @@ public class StudentDaoImpl implements StudentOrderDao {
         child.setIssueDepartment(ro);
 
         Adress adress=new Adress();
-        adress.setPostCode(rs.getString("c_post_index"));
+        adress.setStreet_code(rs.getString("c_post_index"));
         adress.setStreet(new Street((rs.getLong("c_street_code")),""));
         adress.setBuilding(rs.getString("c_bulding"));
         adress.setExtension(rs.getString("c_extension"));

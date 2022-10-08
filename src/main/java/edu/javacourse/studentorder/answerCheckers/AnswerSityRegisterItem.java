@@ -1,4 +1,4 @@
-package edu.javacourse.studentorder.reg_checkers;
+package edu.javacourse.studentorder.answerCheckers;
 
 import edu.javacourse.studentorder.domain.Person;
 

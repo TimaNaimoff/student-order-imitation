@@ -1,1 +1,5 @@
-edu\javacourse\studentorder\dao\SaveStudentOrderTest.class
+edu\javacourse\studentorder\dao\StudentDaoImplTest.class
+edu\javacourse\studentorder\dao\validator\FakeCityRegisterChecker.class
+edu\javacourse\studentorder\dao\SimpleRunner.class
+edu\javacourse\studentorder\dao\DbInit.class
+edu\javacourse\studentorder\dao\DctionaryDaoImplTest.class

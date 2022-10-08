@@ -1,28 +1,28 @@
 package edu.javacourse.studentorder.reg_checkers;
 
 public class CityRegitsterResponse {
-    private boolean existing;
-    private Boolean temporal;
-    public boolean isExisting() {
-        return existing;
+    private boolean registered;
+    private boolean temporal;
+    public boolean isRegistered() {
+        return registered;
     }
 
-    public void setExisting(boolean existing) {
-        this.existing = existing;
+    public void setRegistered(boolean existing) {
+        this.registered = existing;
     }
 
-    public Boolean getTemporal() {
+    public boolean isTemporal() {
         return temporal;
     }
 
-    public void setTemporal(Boolean temporal) {
+    public void setTemporal(boolean temporal) {
         this.temporal = temporal;
     }
 
     @Override
     public String toString() {
         return "SityRegitsterCheckerResponse{" +
-                "existing=" + existing +
+                "existing=" + registered +
                 ", temporal=" + temporal +
                 '}';
     }
